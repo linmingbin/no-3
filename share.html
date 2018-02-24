@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>答题卡分享页</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pop.css">
+    <script src="js/response.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+</head>
+
+<body>
+    <!--top  -->
+    <section class="top">
+    </section>
+    <!--说明区域  -->
+    <section class="textbox">
+        <i class="dou1"></i>
+        <p>XXX送你一张
+            <font class="light">【控】</font>卡，只要集齐5张新春卡片，就能瓜分每天20万馒头（可以兑换Q币、卡通U盘等礼品噢），一起来爱动漫答题吧！</p>
+        <i class="dou2"></i>
+    </section>
+    <!--图片区域  -->
+    <section class="picbox">
+        <img src="images/ka1.jpg" width="100%">
+        <p>【控】1张</p>
+    </section>
+    <!--输入手机号  -->
+    <section class="inputs">
+        <input type="tel" class="shuru" placeholder="请输入手机号码领取好友卡片">
+        <input type="button" class="lingqu" value="领取">
+    </section>
+
+
+    <!--弹窗  -->
+
+    <!--该卡片已被领取，不能重复领取 弹窗  -->
+    <section class="pop pop3 hidden"> <em class="r-kong" onclick="closePop()"></em>
+        <div class="r2-all">
+            <div class="block_dialog">
+                <div class="kuang_box">
+                    <p>该卡片已被领取，不能重复领取</p>
+                </div>
+                <button class="btn btn_fdkpq">下载爱动漫</button>
+            </div>
+        </div>
+    </section>
+    <!--恭喜您 弹窗  -->
+    <section class="pop pop3 pop6 hidden"> <em class="r-kong"></em>
+        <div class="r2-all">
+            <div class="block_dialog">
+                <i class="gontitle">恭喜您</i>
+                <div class="kuang_box">
+                    <p>您已成功领取好友赠送的爱动漫新春XX卡，快去爱动漫集齐所有卡片瓜分百万奖励吧！</p>
+                </div>
+                <button class="btn btn_fdkpq">前往</button>
+            </div>
+        </div>
+    </section>
+    <!--领取账号不存在 弹窗  -->
+    <section class="pop pop3 pop6 hidden"> <em class="r-kong"></em>
+        <div class="r2-all">
+            <div class="block_dialog">
+                <i class="gontitle">恭喜您</i>
+                <div class="kuang_box">
+                    <p>您已成功领取好友赠送的爱动漫漫友卡，快去爱动漫集齐所有卡片瓜分百万奖励吧！</p>
+                    <p>账号：13857765465 </p>
+                    <p>密码：123456</p>
+                </div>
+                <button class="btn btn_fdkpq">下载爱动漫</button>
+            </div>
+        </div>
+    </section>
+    <script src="js/myjs.js"></script>
+</body>
+
+</html>

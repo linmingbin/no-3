@@ -1,0 +1,207 @@
+/*弹出框*/
+.pop {
+	width: 100%;
+	color: #333;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+	/*height:100%;*/
+	z-index: 50;
+  
+}
+.r-kong {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+.pop .r2-all {
+	width: 5.73rem;
+	background: #fbeaea;
+	position: fixed;
+	left: 0;
+	right: 0;
+	border-radius: 0.3rem;
+	margin:0 auto;
+	top: 2.5rem;
+	height: auto;
+	overflow: hidden;
+}
+.btn_fdkpq{
+    width:3.5rem;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    background: #df352a;
+    color: #FFFFFF;
+    font-size: 0.3rem;
+    border-radius: 0.5rem;
+    border:0px;
+    margin:0.34rem auto;
+}
+/*答完题 弹窗  */
+.pop1 .r2-all .kuang_box{
+    background: url('../images/kuangbg1.jpg') #fbeaea;
+    background-size: 100%;
+    height: 2.9rem;
+    margin-top: 0.38rem;
+}
+.k_kabox{
+    width: 5rem;
+    margin: 0 auto;
+    padding-top: 0.35rem;
+}
+.katext{
+    padding: 0.35rem 0;
+    text-align: center;
+    color: #df352a;
+    font-size: 0.3rem;
+}
+/*活动规则  弹窗 */
+.pop2 .r2-all .kuang_box{
+    padding: 0.35rem;
+    color: #df352a;
+    font-size: 0.3rem;
+    line-height: 0.48rem;
+}
+.pop2_title{
+    background: url('../images/kuangtitle.jpg');
+    background-size: 100%;
+    height: 0.51rem;
+    width:3.12rem;
+    text-align: center;
+    line-height: 0.51rem;
+    font-size: 0.28rem;
+    color: #FFFFFF;
+    margin: 0 auto;
+    margin-top: 0.38rem;
+}
+/*下载爱动漫   */
+.pop3 .r2-all .kuang_box{
+    width: 4.35rem;
+    margin: 0 auto;
+    margin-top: 0.38rem;    
+}
+.pop3 .r2-all .kuang_box p{
+    text-align: center;
+    color: #3e3e3e;
+    font-size: 0.3rem;
+    line-height: 0.48rem;
+}
+.pop3 .r2-all{
+    padding: 0.3rem 0;
+}
+/*好友列表空  */
+.pop3 .r2-all .kuang_box p.f_red{
+    color: #df352a;
+}
+/*赠卡记录  索卡记录*/
+.table_k{
+    width: 4.95rem;
+    margin: 0 auto;
+    padding-bottom: 0.35rem; 
+    max-height: 4.25rem;
+    overflow-y: auto;
+}
+.table_h{
+    padding-bottom: 0rem; 
+}
+.table_k table{
+    width: 100%;
+    text-align: center;
+    font-size: 0.26rem;
+}
+.table_k table th,.table_k table td{
+    padding: 0.12rem 0;
+}
+.pop4 .kuang_box{
+    margin-top: 0.3rem;
+}
+.pop4 .kuang_box{
+    margin-bottom: 0.5rem;
+}
+/*好友列表  */
+.pop5 .kuang_box{
+    margin-top: 0.3rem;
+}
+.pop5 .kuang_box .max{
+    max-height: 4.9rem;
+    overflow: auto;
+
+}
+.pop5 .kuang_box ul{
+    width: 100%;
+}
+.pop5 .kuang_box ul li{
+    width: 100%;
+    height: 1.2rem;
+    /* padding: 0 0.2rem; */
+    border-bottom:1px solid #f3cccc;
+    position: relative;
+
+}
+.pop5 .kuang_box ul li span{
+    display: inline-block;
+    width: 0.82rem;
+    height: 0.82rem;
+    background: url(../images/perple.jpg) no-repeat;
+    background-size: 100% 100%;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.41rem;
+    left:0.2rem; 
+}
+.pop5 .kuang_box ul li i{
+    display: block;
+    width: 0.9rem;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.4rem;
+    border: 1px solid #3e3e3e;
+    border-radius: 0.3rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.2rem;
+    right: 0.4rem;
+}
+.pop5 .kuang_box ul li i.active{
+    background:#df352a;
+    color: #FFFFFF;
+    border: 1px solid #df352a;
+}
+.pop5 .kuang_box ul li s{
+    height: 0.4rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.21rem;
+    left:1.2rem; 
+    height: 0.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 2.5rem;
+}
+/*恭喜您  */
+.pop3 .r2-all{
+    overflow: visible;
+}
+.gontitle{
+    display: block;
+    width: 4.58rem;
+    height: 1.12rem;
+    background: url(../images/gontitle.png) no-repeat;
+    background-size: 100% 100%;
+    color: #FFFFFF;
+    font-size:0.34rem;
+    text-align: center;
+    line-height: 0.8rem;
+    position: absolute;
+    top: -0.4rem;
+    left: 50%;
+    margin-left: -2.29rem;
+}
+.pop6 .r2-all .kuang_box{
+    margin-top: 0.6rem;
+}

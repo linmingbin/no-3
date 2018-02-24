@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>答题卡详情页</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pop.css">
+    <script src="js/response.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/myslideup.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".line").slideUp();
+        })
+    </script>
+</head>
+
+<body>
+    <!--top  -->
+    <section class="top">
+        <a onclick="showP('ActivityDetails')">
+            <font>活动详情</font>>></a>
+    </section>
+    <!--答题区  question-->
+    <!--答题前 -->
+    <section class="question question_l">
+        <p>小爱撒馒头啦~666万馒头等着你！</p>
+        <p>每天参与20道问答题，答对5题即可获得随机1张新春卡片，当你集齐5张新春卡片，就能瓜分20万馒头哟！天天集天天分！</p>
+        <p>悄悄告诉你，别忘了向朋友索要卡片哟！</p>
+        <a class="btn btn_ksdt" onclick="showAnswerQuestion()">开始答题</a>
+    </section>
+    <!-- 答题区小勾。只需要给相应的li追加class类名yes -->
+    <section class="question hidden" id="answerQuestion">
+        <div class="qtitle">倒计时:10秒</div>
+        <div class="question_box">
+            <p class="q_title">第1题：号称“飞人”的中国田径运动员是谁？</p>
+            <ul>
+                <li class="yes"> A. 刘翔<span></span></li>
+                <li>B. 刘庸<span></span></li>
+                <li class="yes">C. 刘娴<span></span>1</li>
+            </ul>
+        </div>
+    </section>
+    <!--已收集到的卡片   ka-->
+    <section class="ka">
+        <div class="title">已收集到的卡片</div>
+
+        <!--五张图片分别对应class ka1  ka2  ka3  ka4  ka5  灰色对应  ka1h  ka2h  ka3h  ka4h  ka5h-->
+        <div class="zhan ka1h"></div>
+
+        <!--五张卡片  -->
+        <div class="kabox">
+            <ul>
+                <li><i class="ka1 l"><s class="num">3</s></i></li>
+                <li class="active"><i class="ka2 l"></i></li>
+                <li><i class="ka3 h"></i></li>
+                <li><i class="ka4 h"></i></li>
+                <li><i class="ka5 h"></i></li>
+            </ul>
+        </div>
+        <!--  -->
+        <div class="ass">
+            <div class="friends">
+                <div class="ask" onclick="showP('friendlist')">向好友索要卡</div>
+                <div class="share">分享给好友</div>
+            </div>
+            <div class="record">
+                <ul>
+                    <li class="record-1"><a onclick="showP('SocaRecords')">索卡记录</a></li>
+                    <li class="record-1"><a onclick="showP('CardRecords')">赠卡记录</a></li>
+                    <li><a onclick="showP('AwardRecords')">获奖记录</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- 好友索卡 -->
+    <section class="suoka">
+        <div class="title">好友索卡</div>
+        <div class="suoka-1">
+            <ul>
+                <li>1xxx正在向你索要xxx卡<b><i class="zeng">赠送</i><i class="buzeng">不赠</i></b></li>
+                <li>2xxx正在向你索要xxx卡<b><i class="zeng">赠送</i><i class="buzeng">不赠</i></b></li>
+                <li>3xxx正在向你索要xxx卡<b><i class="zeng">赠送</i><i class="buzeng">不赠</i></b></li>
+                <li>4xxx正在向你索要xxx卡<b><i class="zeng">赠送</i><i class="buzeng">不赠</i></b></li>
+                <li>5xxx正在向你索要xxx卡<b><i class="zeng">赠送</i><i class="buzeng">不赠</i></b></li>
+                <li>6xxx正在向你索要xxx卡<b><i class="zeng">赠送</i><i class="buzeng">不赠</i></b></li>
+                <li>7xxx正在向你索要xxx卡<b><i class="zeng">赠送</i><i class="buzeng">不赠</i></b></li>
+        </div>
+        
+    </section>
+    <!--馒头瓜分记录  -->
+    <section>
+        <div class="title">馒头瓜分记录</div>
+        <div class="mantou">
+            <ul>
+                <li>
+                    <span>集齐日期</span>
+                    <span>获奖人数</span>
+                    <span>人均馒头</span>
+                </li>
+            </ul>
+            <ul class="line">
+                <li>
+                    <span>1.2018-02-08</span>
+                    <span>1000</span>
+                    <span>200</span>
+                </li>
+                <li>
+                    <span>2.2018-02-08</span>
+                    <span>1000</span>
+                    <span>200</span>
+                </li>
+                <li>
+                    <span>3.2018-02-08</span>
+                    <span>1000</span>
+                    <span>200</span>
+                </li>
+                <li>
+                    <span>4.2018-02-08</span>
+                    <span>1000</span>
+                    <span>200</span>
+                </li>
+                <li>
+                    <span>5.2018-02-08</span>
+                    <span>1000</span>
+                    <span>200</span>
+                </li>
+                <li>
+                    <span>6.2018-02-08</span>
+                    <span>1000</span>
+                    <span>200</span>
+                </li>
+                <li>
+                    <span>7.2018-02-08</span>
+                    <span>1000</span>
+                    <span>200</span>
+                </li>
+                <li>
+                    <span>8.2018-02-08</span>
+                    <span>1000</span>
+                    <span>200</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--弹窗  -->
+    <!--答完题的弹窗  -->
+    <section class="pop pop1 hidden"> <em class="r-kong" onclick="closePop()"></em>
+        <div class="r2-all">
+            <div class="block_dialog">
+                <div class="kuang_box">
+                    <!--五张卡片  -->
+                    <div class="kabox k_kabox">
+                        <ul>
+                            <li><i class="ka1 l"></i></li>
+                            <li><i class="ka2 l"></i></li>
+                            <li><i class="ka3 l"></i></li>
+                            <li><i class="ka4 l"></i></li>
+                        </ul>
+                    </div>
+                    <p class="katext">今天共答对20道题，获得4张卡片</p>
+                </div>
+                <button class="btn btn_fdkpq">放到卡片区</button>
+            </div>
+        </div>
+    </section>
+    <!--活动规则 弹窗  -->
+    <section class="pop pop2 hidden" id="ActivityDetails"> <em class="r-kong" onclick="closePop()"></em>
+        <div class="r2-all">
+            <div class="block_dialog">
+                <div class="pop2_title">详细规则说明</div>
+                <div class="kuang_box">
+                    <p>1.活动时间：2月8日-3月12日。</p>
+                    <p>2.活动期间，登录爱动漫客户端的用户每天有且只有1次答题机会，机会不累加。</p>
+                    <p>3.每天共20道题目，每道题目答题时间为10秒，超过10秒自动提交答案。</p>
+                    <p>4.每答对5道题目可随机获得1张新春卡片，集齐5张不同的新春卡片即可平分每日20万馒头奖励。</p>
+                    <p>5.当日集齐5张卡片的用户，5张新春卡片自动消失，次日系统自动发奖。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--下载爱动漫 弹窗  -->
+    <section class="pop pop3 hidden"> <em class="r-kong" onclick="closePop()"></em>
+        <div class="r2-all">
+            <div class="block_dialog">
+                <div class="kuang_box">
+                    <p>您输入的是非爱动漫账号，请先前往下载并注册</p>
+                </div>
+                <button class="btn btn_fdkpq">下载爱动漫</button>
+            </div>
+        </div>
+    </section>
+    <!--好友列表空 获奖记录为空 赠卡记录为空  索卡记录为空 弹窗  -->
+    <section class="pop pop3 hidden"> <em class="r-kong"></em>
+        <div class="r2-all">
+            <div class="block_dialog">
+                <div class="kuang_box">
+                    <p class="f_red">目前还没有好友哦，</p>
+                    <p class="f_red">快去关注好友吧~</p>
+                </div>
+                <button class="btn btn_fdkpq">去关注</button>
+            </div>
+        </div>
+    </section>
+    <!--赠卡记录 弹窗  -->
+    <section class="pop pop4 hidden" id="CardRecords"> <em class="r-kong" onclick="closePop()"></em>
+        <div class="r2-all">
+            <div class="block_dialog">
+                <div class="pop2_title">赠卡记录</div>
+                <div class="kuang_box">
+                    <div class="table_k table_h">
+                        <table>
+                            <tr>
+                                <th width='35%'>赠卡日期</th>
+                                <th width='45%'>好友</th>
+                                <th width='20%'>卡片</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="table_k">
+                        <table>
+                            <tr>
+                                <td width='35%'>2018-02-08</td>
+                                <td width='45%'>xxxx</td>
+                                <td width='20%'>燃</td>
+                            </tr>
+                            <tr>
+                                <td>2018-02-08</td>
+                                <td>xxxx</td>
+                                <td>燃</td>
+                            </tr>
+                            <tr>
+                                <td>2018-02-08</td>
+                                <td>xxxx</td>
+                                <td>燃</td>
+                            </tr>
+                            <tr>
+                                <td>2018-02-08</td>
+                                <td>xxxx</td>
+                                <td>燃</td>
+                            </tr>
+                            <tr>
+                                <td>2018-02-08</td>
+                                <td>xxxx</td>
+                                <td>燃</td>
+                            </tr>
+                            <tr>
+                                <td>2018-02-08</td>
+                                <td>xxxx</td>
+                                <td>燃</td>
+                            </tr>
+                            <tr>
+                                <td>2018-02-08</td>
+                                <td>xxxx</td>
+                                <td>燃</td>
+                            </tr>
+                            <tr>
+                                <td>2018-02-08</td>
+                                <td>xxxx</td>
+                                <td>燃</td>
+                            </tr>
+                            <tr>
+                                <td>2018-02-08</td>
+                                <td>xxxx</td>
+                                <td>燃</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--索卡记录 弹窗  -->
+    <section class="pop pop4 hidden" id="SocaRecords"> <em class="r-kong" onclick="closePop()"></em>
+        <div class="r2-all">
+            <div class="block_dialog">
+                <div class="pop2_title">索卡记录</div>
+                <div class="kuang_box">
+                    <div class="table_k table_h">
+                        <table>
+                            <tr>
+                                <th width='35%'>索卡日期</th>
+                                <th width='45%'>好友</th>
+                                <th width='20%'>卡片</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="table_k">
+                        <table>
+                            <tr>
+                                <td width='35%'>2018-02-08</td>
+                                <td width='45%'>xxxx</td>
+                                <td width='20%'>燃</td>
+                            </tr>
+                            <tr>
+                                <td>2018-02-08</td>
+                                <td>xxxx</td>
+                                <td>燃</td>
+                            </tr>
+                            <tr>
+                                <td>2018-02-08</td>
+                                <td>xxxx</td>
+                                <td>燃</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--获奖记录 弹窗  -->
+    <section class="pop pop4 hidden" id="AwardRecords"> <em class="r-kong" onclick="closePop()"></em>
+        <div class="r2-all">
+            <div class="block_dialog">
+                <div class="pop2_title">获奖记录</div>
+                <div class="kuang_box">
+                    <div class="table_k table_h">
+                        <table>
+                            <tr>
+                                <th width='35%'>集齐日期</th>
+                                <th width='35%'>获奖馒头</th>
+                                <th width='30%'>是否已发奖</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="table_k">
+                        <table>
+                            <tr>
+                                <td width='35%'>2018-02-08</td>
+                                <td width='35%'>xxxx</td>
+                                <td width='30%'>燃</td>
+                            </tr>
+                            <tr>
+                                <td>2018-02-08</td>
+                                <td>xxxx</td>
+                                <td>燃</td>
+                            </tr>
+                            <tr>
+                                <td>2018-02-08</td>
+                                <td>xxxx</td>
+                                <td>燃</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--好友列表 弹窗  -->
+    <section class="pop pop5 hidden" id="friendlist"> <em class="r-kong" onclick="closePop()"></em>
+        <div class="r2-all">
+            <div class="block_dialog">
+                <div class="pop2_title">好友列表</div>
+                <div class="kuang_box">
+                    <div class="max">
+                        <ul>
+                            <li><span></span>
+                                <s>昵称昵称</s><i>选择</i></li>
+                            <li><span></span>
+                                <s>昵称昵昵称昵称昵称昵称称</s><i>选择</i></li>
+                            <li><span></span>
+                                <s>昵称昵称</s><i>选择</i></li>
+                            <li><span></span>
+                                <s>昵称昵称</s><i>选择</i></li>
+                            <li><span></span>
+                                <s>昵称昵称</s><i>选择</i></li>
+                            <li><span></span>
+                                <s>昵称昵称</s><i>选择</i></li>
+                            <li><span></span>
+                                <s>昵称昵称</s><i>选择</i></li>
+                            <li><span></span>
+                                <s>昵称昵称</s><i>选择</i></li>
+                            <li><span></span>
+                                <s>昵称昵称</s><i>选择</i></li>
+                            <li><span></span>
+                                <s>昵称昵称</s><i>选择</i></li>
+                        </ul>
+                    </div>
+                    <button class="btn btn_fdkpq">确定</button>
+                </div>
+            </div>
+    </section>
+    <!--恭喜您 弹窗  -->
+    <section class="pop pop3 pop6 hidden"> <em class="r-kong"></em>
+        <div class="r2-all">
+            <div class="block_dialog">
+                <i class="gontitle">恭喜您</i>
+                <div class="kuang_box">
+                    <p>您已成功领取好友赠送的爱动漫新春XX卡，快去爱动漫集齐所有卡片瓜分百万奖励吧！</p>
+                </div>
+                <button class="btn btn_fdkpq">前往</button>
+            </div>
+        </div>
+    </section>
+    <script src="js/myjs.js"></script>
+</body>
+
+</html>
